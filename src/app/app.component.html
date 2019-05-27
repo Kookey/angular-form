@@ -2,3 +2,9 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="firstName">
+  </form>
+</div>
