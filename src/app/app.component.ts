@@ -32,9 +32,18 @@ export class AppComponent  {
     const pr = new Profile();
      console.warn(pr);
     const domainSetting: Object = Reflect.getPrototypeOf(pr);
-    console.warn(domainSetting);
-    this.profileForm = this.fb.group(domainSetting);
-    this.domain.firstName = 'xingl';
+    console.warn(Reflect.getPrototypeOf(pr));
+    this.profileForm = this.fb.group({
+    firstName: [''],
+    lastName: [''],
+    address: this.fb.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zip: ['']
+    }),
+  });
+    this.domain.firstName = '12322';
     this.domain.address.city = 'sh';
     console.log(this.domain);
     console.log('111');

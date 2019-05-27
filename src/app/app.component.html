@@ -6,5 +6,10 @@
 <div>
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <input type="text" formControlName="firstName">
+
+    <div formGroupName="address">
+      <h1>Address</h1>
+      <input formControlName="city">
+    </div>
   </form>
 </div>
